@@ -2,8 +2,6 @@
 
 Add-on Chrome minimaliste de traduction du [Dex de Run and Bun](https://dex.runandbun.com/) et du [Calc de Run and Bun](https://calc.runandbun.com/) en Français.
 
-![Aperçu du site traduit](apercu.png)
-
 ## Installation
 
 1. Télécharger ce Repo (```git clone``` ou "Code" -> "Download ZIP") et extraire l'archive.
@@ -31,5 +29,6 @@ Si vous souhaitez continuer le développement de l'Add-On, libre à vous de fair
 
 ## Crédits
 
-- Concept : [Magnatix](https://x.com/Magnat_Hique)
-- Ressources de Traduction Showdown FR + Explications Perso : [Sykless](https://github.com/Sykless)
+- Add-On : [Memory5ty7](https://github.com/memory5ty7/)
+- Idée de : [Magnatix](https://x.com/Magnat_Hique)
+- Ressources de Traduction Showdown FR + Explications perso : [Sykless](https://github.com/Sykless)
