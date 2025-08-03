@@ -3,10 +3,14 @@
   "name": "Documentation Run and Bun FR",
   "version": "1.0",
   "permissions": ["activeTab", "scripting"],
-  "content_scripts": [{
-  "matches": ["https://dex.runandbun.com/*"
-            ],
-  "js": ["content.js"],
+  "content_scripts": [
+  {
+  "matches": ["https://dex.runandbun.com/*"],
+  "js": ["translation.js","dex.js"],
   "run_at": "document_idle"
-}]
+  },{
+  "matches": ["https://calc.runandbun.com/"],
+  "js": ["translation.js","calc.js"],
+  "run_at": "document_idle"
+  }]
 }

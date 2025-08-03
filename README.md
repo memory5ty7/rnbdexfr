@@ -1,6 +1,6 @@
-# Documentation Run and Bun FR
+# Dex et Calc Run and Bun FR
 
-Add-on Chrome minimaliste de traduction du [Dex de Run and Bun](https://dex.runandbun.com/) en Français.
+Add-on Chrome minimaliste de traduction du [Dex de Run and Bun](https://dex.runandbun.com/) et du [Calc de Run and Bun](https://calc.runandbun.com/) en Français.
 
 ![Aperçu du site traduit](apercu.png)
 
@@ -15,7 +15,7 @@ Add-on Chrome minimaliste de traduction du [Dex de Run and Bun](https://dex.runa
 - Charger l'Extension non empaquetée (haut à gauche)
 - Sélectionner le dossier dans lequel se trouve l'archive dézipée
 
-3. Aller sur le [Dex de Run and Bun](https://dex.runandbun.com/)
+3. Aller sur le [Dex de Run and Bun](https://dex.runandbun.com/) ou sur le [Calc de Run and Bun](https://calc.runandbun.com/)
 
 ## Utilisation
 

@@ -1,5 +1,6 @@
-const PokemonDico = 
-  {
+window.AddOnDictionaries = window.AddOnDictionaries || {};
+
+window.AddOnDictionaries.PokemonDico = {
     "Bulbasaur": "Bulbizarre",
     "Ivysaur": "Herbizarre",
     "Venusaur": "Florizarre",
@@ -1508,7 +1509,7 @@ const PokemonDico =
     "Pecharunt": "Pêchaminus"
 };
 
-const AbilityDico = {
+window.AddOnDictionaries.AbilityDico =  {
 	"No Ability": "Pas de Talent",
     "Stench": "Puanteur",
     "Drizzle": "Crachin",
@@ -1825,7 +1826,7 @@ const AbilityDico = {
     "Tera Shift": "Téramorphose"
 };
 
-const MoveDico = {
+window.AddOnDictionaries.MoveDico = {
 	"No move": "Pas de capacité",
 	"Pound": "Écras'Face",
 	"Karate Chop": "Poing Karaté",
@@ -2782,7 +2783,7 @@ const MoveDico = {
 	"Upper Hand": "Prio-Parade"
 };
 
-const ItemDico = {
+window.AddOnDictionaries.ItemDico = {
 	"No item": "Pas d'objet",
 	"None": "Aucun",
 	"Abomasite": "Blizzarite",
@@ -3319,7 +3320,7 @@ const ItemDico = {
 	"Metal Alloy": "Métal Composite"
 };
 
-const MovesLongDescDico = {
+window.AddOnDictionaries.MovesLongDescDico = {
 	"10,000,000 Volt Thunderbolt": "Capacité-Z de Pikachu basée sur Tonnerre, cette capacité a 50% de chance d'infliger un coup critique.",
 	"Absorb": "L'utilisateur récupère la moitié des PVs perdus par la cible.",
 	"Accelerock": "Aucun effet supplémentaire.",
@@ -4140,7 +4141,7 @@ const MovesLongDescDico = {
 	"Upper Hand": "Si la cible utilise une capacité de priorité +1 ou supérieur ce tour-ci, cette attaque agit en premier et apeure la cible. Echoue si la cible n'utilise pas une capacité de priorité."
 };
 
-const ItemsLongDescDico = {
+window.AddOnDictionaries.ItemsLongDescDico = {
 	"Abomasite": "Tenue par un Blizzaroi, elle lui permet de méga-évoluer durant un combat.",
     "Absolite": "Tenue par un Absol, elle lui permet de méga-évoluer durant un combat.",
     "Absorb Bulb": "Augmente l'Atq. Spé du porteur de 1 si touché par une capacité Eau. Usage unique.",
@@ -4671,7 +4672,7 @@ const ItemsLongDescDico = {
 	"Syrupy Apple": "Fait évoluer Verpom en Pomdramour."
 };
 
-const AbilitiesShortDescDico = {
+window.AddOnDictionaries.AbilitiesShortDescDico = {
     "No Ability": "Ne fait rien.",
     "Adaptability": "Le STAB de ce Pokémon est de 2 à la place de 1.5.",
     "Aerilate": "Les capacités Normal du Pokémon deviennent Vol, leur puissance augmente de 20%.",
@@ -4985,7 +4986,7 @@ const AbilitiesShortDescDico = {
 	"Tera Shell": "Toutes les capacités reçues deviennent peu efficaces tant que le Pokémon a tous ses PV."
 };
 
-const MovesShortDescDico = {
+window.AddOnDictionaries.MovesShortDescDico = {
     "10,000,000 Volt Thunderbolt": "Taux de critique très élevé.",
     "Absorb": "Le lanceur se soigne de 50% des dommages infligés.",
     "Accelerock": "Frappe en priorité +1.",
@@ -5899,7 +5900,7 @@ const MovesShortDescDico = {
 	"Upper Hand": "100% peur, échoue sauf si la cible agit en priorité."
 };
 
-const MoveEffectDico = {
+window.AddOnDictionaries.MoveEffectDico = {
 	"The user thaws out if it is frozen.": "L'utilisateur est dégelé.",
 	"Not blocked by Protect": "Pas bloqué par Abri ",
 	"(and Detect, King's Shield, Spiky Shield)": "(ni Détection, Bouclier Royal, Pico-Défense)",
@@ -5935,251 +5936,41 @@ const MoveEffectDico = {
 	"(doesn't affect Bulletproof pokemon)": "(n'affecte pas les Pokémon avec Pare-Balles)",
 }
 
-function walk(node) {
-  let child, next;
-
-  switch (node.nodeType) {
-    case 1:
-    case 9:
-    case 11:
-      child = node.firstChild;
-      while (child) {
-        next = child.nextSibling;
-        walk(child);
-        child = next;
-      }
-      break;
-    case 3:
-      handleText(node);
-      break;
-  }
+window.AddOnDictionaries.CalcButtons = {
+    "Singles" : "Solo",
+    "Doubles" : "Duo",
+    "Electric Terrain" : "Champ Électrifié",
+    "Grassy Terrain" : "Champ Herbu",
+    "Misty Terrain" : "Champ Brumeux",
+    "Psychic Terrain" : "Champ Psychique",
+    "Sun" : "Soleil",
+    "Rain" : "Pluie",
+    "Sand" : "Sable",
+    "Hail" : "Grêle",
+    "Harsh Sunshine" : "Soleil Intense",
+    "Heavy Rain" : "Pluie Battante",
+    "Strong Winds" : "Vent Mystérieux",
+    "Magic Room" : "Zone Magique",
+    "Wonder Room" : "Zone Étrange",
+    "Gravity" : "Gravité",
+    "Stealth Rock" : "Piège de Roc",
+    "Steelsurge" : "Percée",
+    "Vine Lash" : "Fouet",
+    "Wildfire" : "Fournaise",
+    "Cannonade": "Canonnade",
+    "Volcalith" : "Téphra",
+    "3 Spikes" : "3 Picots",
+    "Reflect" : "Protection",
+    "Light Screen" : "Mur Lumière",
+    "Protect" : "Abri",
+    "Leech Seed" : "Vampigraine",
+    "Foresight" : "Clairvoyance",
+    "Helping Hand" : "Coup d'Main",
+    "Tailwind" : "Vent Arrière",
+    "Flower Gift" : "Don Floral",
+    "Friend Guard" : "Garde-Ami",
+    "Aurora Veil" : "Voile Aurore",
+    "Battery" : "Batterie",
+    "Power Spot" : "Cercle d'Énergie",
+    "Switching Out" : "Switch Out",
 }
-
-function escapeRegExp(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function applyDictionary(text, dict) {
-  return dict[text] || text;
-}
-
-function getApplicableDict(textNode) {
-  let node = textNode;
-  while (node) {
-    if (node.nodeName === "A" && node.hasAttribute("href")) {
-      const href = node.getAttribute("href");
-      if (href.startsWith("/pokemon/")) return PokemonDico;
-      if (href.startsWith("/items/")) return ItemDico;
-      if (href.startsWith("/moves/")) return MoveDico;
-      if (href.startsWith("/abilities/")) return AbilityDico;
-    }
-    if (node.nodeName === "SPAN") {
-      if (node.classList.contains("pokemon-name")) return PokemonDico;
-      if (node.classList.contains("item-name")) return ItemDico;
-      if (node.classList.contains("move-name")) return MoveDico;
-      if (node.classList.contains("abilitycol") || node.classList.contains("twoabilitycol")) return AbilityDico;
-    }
-    node = node.parentNode;
-  }
-  return "";
-}
-
-function translateDescriptions(root = document) {
-  const types = [
-    {
-      prefix: "/moves/",
-      dict: MovesShortDescDico,
-      descClass: ".movedesccol"
-    },
-    {
-      prefix: "/items/",
-      dict: ItemsLongDescDico,
-      descClass: ".itemdesccol"
-    },
-    {
-      prefix: "/abilities/",
-      dict: AbilitiesShortDescDico,
-      descClass: ".abilitydesccol"
-    }
-  ];
-
-  types.forEach(({ prefix, dict, descClass }) => {
-    (root.querySelectorAll ? root.querySelectorAll(`a[href^='${prefix}']`) : []).forEach(link => {
-      const dataEntry = link.getAttribute("data-entry");
-      if (!dataEntry) return;
-
-      const parts = dataEntry.split("|");
-      if (parts.length !== 2) return;
-
-      const name = parts[1].trim();
-      const descSpan = link.querySelector(descClass);
-      if (!descSpan) return;
-
-      if (dict[name] && descSpan.textContent !== dict[name]) {
-        descSpan.textContent = dict[name];
-      }
-    });
-  });
-}
-
-function translateByDictionary(root, selector, dictionary) {
-  if (!root) return;
-  const links = root.querySelectorAll(selector);
-  links.forEach(a => {
-    const name = a.textContent.trim();
-    const translated = dictionary[name];
-
-    if (translated) {
-      let container = a.closest('h1') || a.parentElement;
-      if (!container) return;
-
-      let p = container.nextElementSibling;
-      if (!p || p.tagName.toLowerCase() !== 'p') {
-        p = container.parentElement?.querySelector('p');
-      }
-
-      if (p && p.tagName.toLowerCase() === 'p') {
-        p.textContent = translated;
-      } else {
-        console.warn('No <p> found near', a);
-      }
-    }
-  });
-}
-
-function translateParagraphs(root) {
-  translateByDictionary(root, 'h1 a', ItemsLongDescDico);
-  translateByDictionary(root, 'h1 a', MovesLongDescDico);
-  translateByDictionary(root, 'h1 a', AbilitiesShortDescDico);
-}
-
-function translateTagDescriptions(root) {
-  if (!root || root.nodeType !== Node.ELEMENT_NODE) return;
-
-  const tagLinks = root.querySelectorAll('a[href^="/tags/"]');
-
-  tagLinks.forEach(link => {
-    const tagNameRaw = link.textContent.trim();
-    
-    const newTagText = MoveEffectDico[tagNameRaw];
-    
-    if (newTagText) {
-      link.textContent = newTagText;
-    }
-
-    const container = link.closest('p.movetag');
-    const small = container?.querySelector('small');
-    if (small && MoveEffectDico[small.textContent]) {
-      small.textContent = MoveEffectDico[small.textContent];
-    }
-  });
-}
-
-function translateNode(node) {
-  if (node.nodeType === 3) {  // Text node
-    const dict = getApplicableDict(node);
-    const original = node.nodeValue;
-    const translated = applyDictionary(original, dict);
-    if (translated !== original) {
-      node.nodeValue = translated;
-    }
-  } else if (node.nodeType === 1 && !node.hasAttribute("data-translated")) {
-    node.childNodes.forEach(translateNode);
-  }
-}
-
-function observeAndTranslate(root = document.body) {
-  translateTagDescriptions(root);
-  translateDescriptions(root);
-  translateParagraphs(root);
-  translateNode(root);
-  
-  const observer = new MutationObserver(mutations => {
-    mutations.forEach(mutation => {
-      mutation.addedNodes.forEach(node => {
-        translateTagDescriptions(node);
-        translateDescriptions(node);
-        translateParagraphs(root);
-        translateNode(node);
-      });
-    });
-  });
-
-  observer.observe(root, {
-    childList: true,
-    subtree: true
-  });
-}
-
-function enableLiveInputTranslation() {
-  function attachListener(input) {
-    if (!input._liveTranslationAttached) {
-      input._liveTranslationAttached = true;
-
-      const mergedDict = {
-        ...PokemonDico,
-        ...AbilityDico,
-        ...MoveDico,
-        ...ItemDico
-      };
-
-      const ReversedGlobalDico = Object.fromEntries(
-        Object.entries(mergedDict).map(([en, fr]) => [fr.toLowerCase(), en])
-      );
-
-      const sortedFrenchKeys = Object.keys(ReversedGlobalDico).sort((a, b) => b.length - a.length);
-
-      function escapeRegex(text) {
-        return text.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-      }
-
-      function matchCasing(original, replacement) {
-        if (original === original.toUpperCase()) return replacement.toUpperCase();
-        if (original[0] === original[0].toUpperCase()) {
-          return replacement[0].toUpperCase() + replacement.slice(1).toLowerCase();
-        }
-        return replacement.toLowerCase();
-      }
-
-      const letters = 'a-zA-ZàâäéèêëïîôöùûüÿçÀÂÄÉÈÊËÏÎÔÖÙÛÜŸÇ';
-
-      input.addEventListener('input', () => {
-        const caret = input.selectionStart;
-        let text = input.value;
-        let changed = false;
-
-        for (const frTerm of sortedFrenchKeys) {
-          const escaped = escapeRegex(frTerm);
-          const regex = new RegExp(`(^|[^${letters}])(${escaped})(?=[^${letters}]|$)`, 'gi');
-
-          text = text.replace(regex, (match, prefix, word) => {
-            const replacement = ReversedGlobalDico[word.toLowerCase()];
-            if (!replacement) return match;
-            changed = true;
-            return prefix + matchCasing(word, replacement);
-          });
-        }
-
-        if (changed) {
-          input.value = text;
-          input.setSelectionRange(caret, caret);
-        }
-      });
-    }
-  }
-
-  let input = document.querySelector('.searchboxwrapper .searchbox');
-  if (input) attachListener(input);
-
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach(() => {
-      const newInput = document.querySelector('.searchboxwrapper .searchbox');
-      if (newInput) attachListener(newInput);
-    });
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-}
-
-observeAndTranslate();
-enableLiveInputTranslation();
