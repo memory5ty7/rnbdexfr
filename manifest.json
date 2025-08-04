@@ -3,6 +3,9 @@
   "name": "Dex et Calc Run and Bun FR",
   "version": "1.0",
   "permissions": ["activeTab", "scripting"],
+  "icons": {
+    "128": "icon128.png"
+  },
   "content_scripts": [
   {
   "matches": ["https://dex.runandbun.com/*"],
